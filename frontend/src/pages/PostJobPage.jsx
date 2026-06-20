@@ -37,7 +37,7 @@ const PostJobPage = () => {
         setFetchingJob(true);
         setError('');
         try {
-          const res = await fetch(`http://localhost:5000/api/jobs/${id}`);
+          const res = await fetch(`/api/jobs/${id}`);
           if (!res.ok) throw new Error('Job post not found');
           
           const job = await res.json();
@@ -92,8 +92,8 @@ const PostJobPage = () => {
 
     try {
       const url = isEditMode 
-        ? `http://localhost:5000/api/jobs/${id}`
-        : 'http://localhost:5000/api/jobs';
+        ? `/api/jobs/${id}`
+        : '/api/jobs';
       
       const method = isEditMode ? 'PUT' : 'POST';
 

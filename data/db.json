@@ -1,0 +1,125 @@
+{
+  "users": [
+    {
+      "_id": "mtlr571eysczzzse82",
+      "createdAt": "2026-06-20T07:48:37.977Z",
+      "updatedAt": "2026-06-20T07:48:37.978Z",
+      "name": "Jane Doe",
+      "email": "seeker@nexthire.com",
+      "password": "$2a$10$NrPWYvgcpBAldmKypvya/.Km3QzfYCMTKYZjIrDAtrABUmLC28dwW",
+      "role": "seeker",
+      "profile": {
+        "skills": [
+          "React",
+          "JavaScript",
+          "CSS Grid",
+          "Node.js",
+          "Express"
+        ],
+        "resumeName": "Jane_Doe_Resume.pdf",
+        "resumeUrl": "https://nexthire.com/resumes/jane_doe_resume.pdf",
+        "bio": "Passionate Frontend Developer with 3+ years of experience building responsive and interactive web applications.",
+        "experience": "Frontend Developer at WebSolutions (2 years)\nJunior Dev at StartupCo (1 year)",
+        "education": "B.S. in Computer Science - University of State (2022)",
+        "companyName": ""
+      }
+    },
+    {
+      "_id": "p392vnoemvmock1las",
+      "createdAt": "2026-06-20T07:48:37.978Z",
+      "updatedAt": "2026-06-20T07:48:37.978Z",
+      "name": "John Recruiter",
+      "email": "recruiter@nexthire.com",
+      "password": "$2a$10$NrPWYvgcpBAldmKypvya/.Km3QzfYCMTKYZjIrDAtrABUmLC28dwW",
+      "role": "recruiter",
+      "profile": {
+        "skills": [],
+        "resumeName": "",
+        "resumeUrl": "",
+        "bio": "Talent Acquisition Manager hiring top tech talents globally.",
+        "experience": "",
+        "education": "",
+        "companyName": "NextHire Tech"
+      }
+    }
+  ],
+  "jobs": [
+    {
+      "_id": "lg5sg3mfwkolp6vixd",
+      "createdAt": "2026-06-20T07:48:37.979Z",
+      "updatedAt": "2026-06-20T07:48:37.979Z",
+      "title": "Senior React Developer",
+      "company": "Vercel",
+      "description": "We are looking for a Senior React Developer to join our core framework team. You will work on Next.js optimization, layout rendering engines, and building world-class developer experiences. Ideal candidates have deep expertise in React concurrent features, React Server Components (RSC), and edge computing paradigms.",
+      "requirements": [
+        "5+ years of software engineering experience",
+        "Deep knowledge of React, Next.js, and TypeScript",
+        "Experience building developer tools or open-source libraries",
+        "Familiarity with Webpack, Turbopack, or modern bundlers",
+        "Excellent written and verbal communication skills"
+      ],
+      "location": "Remote (US/Europe)",
+      "salaryRange": "$130,000 - $160,000",
+      "jobType": "Full-time",
+      "recruiterId": "p392vnoemvmock1las"
+    },
+    {
+      "_id": "a3b9ivn0af8fst9gpm",
+      "createdAt": "2026-06-20T07:48:37.979Z",
+      "updatedAt": "2026-06-20T07:48:37.979Z",
+      "title": "Full Stack Engineer",
+      "company": "Stripe",
+      "description": "Stripe is looking for a Full Stack Engineer to join our billing platforms. You will design, build, and maintain APIs, merchant dashboards, and reliable payment processing pipelines. You will collaborate closely with product managers and designer leads to deliver exceptional checkout integrations.",
+      "requirements": [
+        "3+ years of experience in product engineering",
+        "Proficiency with Ruby, Python, Go, or Node.js backend environments",
+        "Solid understanding of databases (Postgres, MongoDB) and API design",
+        "Comfortable writing React and CSS layouts for merchant dashboards",
+        "Strong security mind-set and attention to edge cases"
+      ],
+      "location": "San Francisco, CA (Hybrid)",
+      "salaryRange": "$145,000 - $185,000",
+      "jobType": "Full-time",
+      "recruiterId": "p392vnoemvmock1las"
+    },
+    {
+      "_id": "s3gr2ln9kxqd3bmurs",
+      "createdAt": "2026-06-20T07:48:37.980Z",
+      "updatedAt": "2026-06-20T07:48:37.980Z",
+      "title": "UI/UX Product Designer",
+      "company": "Airbnb",
+      "description": "Design the future of travel. Airbnb is seeking a talented Product Designer to redefine our hosting tools. You will create high-fidelity prototypes, conduct user research, and build beautiful component libraries. You should be passionate about detail, glassmorphism aesthetics, accessibility, and micro-interactions.",
+      "requirements": [
+        "4+ years designing consumer-facing mobile/web apps",
+        "Stunning portfolio demonstrating interaction design and visual craftsmanship",
+        "Expertise in Figma, Framer, and design system creation",
+        "Basic understanding of HTML/CSS is highly appreciated",
+        "Ability to collaborate across product development lifecycles"
+      ],
+      "location": "New York, NY",
+      "salaryRange": "$110,000 - $140,000",
+      "jobType": "Contract",
+      "recruiterId": "p392vnoemvmock1las"
+    },
+    {
+      "_id": "kaoseu7z0j9t8ra1uw",
+      "createdAt": "2026-06-20T07:48:37.980Z",
+      "updatedAt": "2026-06-20T07:48:37.980Z",
+      "title": "Junior Developer (Node.js)",
+      "company": "Supabase",
+      "description": "Join Supabase as a Junior Node.js Developer. You will assist in writing serverless edge functions, improving CLI capabilities, and creating user-friendly guides. This is a junior role with immense mentorship and learning opportunities in postgres, database design, and real-time sockets.",
+      "requirements": [
+        "1+ years of coding experience or boot camp graduate",
+        "Familiarity with Javascript/Node.js and Express",
+        "Understanding of REST APIs and relational databases",
+        "Hungry to learn, ask questions, and contribute to open-source",
+        "Basic git knowledge (pull requests, branching)"
+      ],
+      "location": "Remote (Global)",
+      "salaryRange": "$60,000 - $80,000",
+      "jobType": "Full-time",
+      "recruiterId": "p392vnoemvmock1las"
+    }
+  ],
+  "applications": []
+}

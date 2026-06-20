@@ -32,7 +32,7 @@ const DashboardPage = () => {
       try {
         if (user.role === 'seeker') {
           // Fetch seeker applications
-          const res = await fetch('http://localhost:5000/api/applications/seeker', {
+          const res = await fetch('/api/applications/seeker', {
             headers: {
               'Authorization': `Bearer ${token}`
             }
@@ -42,7 +42,7 @@ const DashboardPage = () => {
           setSeekerApplications(data);
         } else {
           // Fetch recruiter posted jobs
-          const res = await fetch('http://localhost:5000/api/jobs/recruiter', {
+          const res = await fetch('/api/jobs/recruiter', {
             headers: {
               'Authorization': `Bearer ${token}`
             }
@@ -70,7 +70,7 @@ const DashboardPage = () => {
     setError('');
 
     try {
-      const res = await fetch(`http://localhost:5000/api/applications/job/${jobId}`, {
+      const res = await fetch(`/api/applications/job/${jobId}`, {
         headers: {
           'Authorization': `Bearer ${token}`
         }
@@ -89,7 +89,7 @@ const DashboardPage = () => {
   // Recruiter: Update application status
   const handleUpdateStatus = async (appId, newStatus) => {
     try {
-      const res = await fetch(`http://localhost:5000/api/applications/${appId}`, {
+      const res = await fetch(`/api/applications/${appId}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -117,7 +117,7 @@ const DashboardPage = () => {
     }
 
     try {
-      const res = await fetch(`http://localhost:5000/api/jobs/${jobId}`, {
+      const res = await fetch(`/api/jobs/${jobId}`, {
         method: 'DELETE',
         headers: {
           'Authorization': `Bearer ${token}`

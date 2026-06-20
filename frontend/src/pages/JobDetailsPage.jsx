@@ -28,7 +28,7 @@ const JobDetailsPage = () => {
       setError('');
       try {
         // Fetch Job Details
-        const res = await fetch(`http://localhost:5000/api/jobs/${id}`);
+        const res = await fetch(`/api/jobs/${id}`);
         if (!res.ok) {
           throw new Error('Failed to retrieve job details');
         }
@@ -41,7 +41,7 @@ const JobDetailsPage = () => {
           setResumeUrl(user.profile?.resumeUrl || '');
 
           // Check if seeker already applied
-          const appsRes = await fetch('http://localhost:5000/api/applications/seeker', {
+          const appsRes = await fetch('/api/applications/seeker', {
             headers: {
               'Authorization': `Bearer ${token}`
             }
@@ -69,7 +69,7 @@ const JobDetailsPage = () => {
     setError('');
 
     try {
-      const res = await fetch('http://localhost:5000/api/applications', {
+      const res = await fetch('/api/applications', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

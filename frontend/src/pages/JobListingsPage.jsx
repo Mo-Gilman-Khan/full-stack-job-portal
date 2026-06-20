@@ -30,7 +30,7 @@ const JobListingsPage = () => {
         if (jt) queryParams.push(`jobType=${encodeURIComponent(jt)}`);
 
         const queryString = queryParams.length ? `?${queryParams.join('&')}` : '';
-        const res = await fetch(`http://localhost:5000/api/jobs${queryString}`);
+        const res = await fetch(`/api/jobs${queryString}`);
         
         if (!res.ok) {
           throw new Error('Failed to load jobs');
