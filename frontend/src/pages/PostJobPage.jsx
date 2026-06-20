@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, useParams, Link } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
+import { API_URL } from '../config';
 import { Briefcase, MapPin, DollarSign, ListChecks, AlignLeft, ChevronLeft } from 'lucide-react';
 
 const PostJobPage = () => {
@@ -37,7 +38,7 @@ const PostJobPage = () => {
         setFetchingJob(true);
         setError('');
         try {
-          const res = await fetch(`/api/jobs/${id}`);
+          const res = await fetch(`${API_URL}/jobs/${id}`);
           if (!res.ok) throw new Error('Job post not found');
           
           const job = await res.json();
@@ -92,8 +93,8 @@ const PostJobPage = () => {
 
     try {
       const url = isEditMode 
-        ? `/api/jobs/${id}`
-        : '/api/jobs';
+        ? `${API_URL}/jobs/${id}`
+        : `${API_URL}/jobs`;
       
       const method = isEditMode ? 'PUT' : 'POST';
 

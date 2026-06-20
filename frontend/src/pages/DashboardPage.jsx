@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
+import { API_URL } from '../config';
 import { Briefcase, FileText, CheckCircle2, User, Eye, Edit3, Trash2, ChevronRight, X } from 'lucide-react';
 
 const DashboardPage = () => {
@@ -32,7 +33,7 @@ const DashboardPage = () => {
       try {
         if (user.role === 'seeker') {
           // Fetch seeker applications
-          const res = await fetch('/api/applications/seeker', {
+          const res = await fetch(`${API_URL}/applications/seeker`, {
             headers: {
               'Authorization': `Bearer ${token}`
             }
@@ -42,7 +43,7 @@ const DashboardPage = () => {
           setSeekerApplications(data);
         } else {
           // Fetch recruiter posted jobs
-          const res = await fetch('/api/jobs/recruiter', {
+          const res = await fetch(`${API_URL}/jobs/recruiter`, {
             headers: {
               'Authorization': `Bearer ${token}`
             }
@@ -70,7 +71,7 @@ const DashboardPage = () => {
     setError('');
 
     try {
-      const res = await fetch(`/api/applications/job/${jobId}`, {
+      const res = await fetch(`${API_URL}/applications/job/${jobId}`, {
         headers: {
           'Authorization': `Bearer ${token}`
         }
@@ -89,7 +90,7 @@ const DashboardPage = () => {
   // Recruiter: Update application status
   const handleUpdateStatus = async (appId, newStatus) => {
     try {
-      const res = await fetch(`/api/applications/${appId}`, {
+      const res = await fetch(`${API_URL}/applications/${appId}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -117,7 +118,7 @@ const DashboardPage = () => {
     }
 
     try {
-      const res = await fetch(`/api/jobs/${jobId}`, {
+      const res = await fetch(`${API_URL}/jobs/${jobId}`, {
         method: 'DELETE',
         headers: {
           'Authorization': `Bearer ${token}`

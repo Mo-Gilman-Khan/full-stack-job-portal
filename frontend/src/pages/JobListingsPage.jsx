@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useSearchParams, Link } from 'react-router-dom';
 import { Search, MapPin, Briefcase, DollarSign, Calendar, Filter, X } from 'lucide-react';
+import { API_URL } from '../config';
 
 const JobListingsPage = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -30,7 +31,7 @@ const JobListingsPage = () => {
         if (jt) queryParams.push(`jobType=${encodeURIComponent(jt)}`);
 
         const queryString = queryParams.length ? `?${queryParams.join('&')}` : '';
-        const res = await fetch(`/api/jobs${queryString}`);
+        const res = await fetch(`${API_URL}/jobs${queryString}`);
         
         if (!res.ok) {
           throw new Error('Failed to load jobs');

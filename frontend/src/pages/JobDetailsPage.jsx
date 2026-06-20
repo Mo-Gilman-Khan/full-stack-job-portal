@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
+import { API_URL } from '../config';
 import { MapPin, DollarSign, Briefcase, ChevronLeft, ArrowRight, FileText, CheckCircle2 } from 'lucide-react';
 
 const JobDetailsPage = () => {
@@ -28,7 +29,7 @@ const JobDetailsPage = () => {
       setError('');
       try {
         // Fetch Job Details
-        const res = await fetch(`/api/jobs/${id}`);
+        const res = await fetch(`${API_URL}/jobs/${id}`);
         if (!res.ok) {
           throw new Error('Failed to retrieve job details');
         }
@@ -41,7 +42,7 @@ const JobDetailsPage = () => {
           setResumeUrl(user.profile?.resumeUrl || '');
 
           // Check if seeker already applied
-          const appsRes = await fetch('/api/applications/seeker', {
+          const appsRes = await fetch(`${API_URL}/applications/seeker`, {
             headers: {
               'Authorization': `Bearer ${token}`
             }
@@ -69,7 +70,7 @@ const JobDetailsPage = () => {
     setError('');
 
     try {
-      const res = await fetch('/api/applications', {
+      const res = await fetch(`${API_URL}/applications`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
